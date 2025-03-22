@@ -114,8 +114,8 @@ def test_single_volume(case, net, test_save_path, FLAGS):
 
 def Inference(FLAGS):
     train_ids, test_ids = get_fold_ids(FLAGS.fold)
-    all_volumes = os.listdir(
-        FLAGS.root_path + "/ACDC_training_volumes")
+   # all_volumes = os.listdir(FLAGS.root_path + "/ACDC_training_volumes")
+  all_volumes = os.listdir("/kaggle/working/acdc-data/ACDC_training_volumes")
     image_list = []
     for ids in test_ids:
         new_data_list = list(filter(lambda x: re.match(
